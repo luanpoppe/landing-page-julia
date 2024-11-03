@@ -9,7 +9,7 @@ export function Contact() {
       <section
         className="d-flex justify-content-center gap-5 text-center"
         id="right-home"
-        style={{ margin: "5% 10%" }}
+        style={{ margin: "5% 7%" }}
       >
         <div>
           <img
