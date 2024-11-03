@@ -2,6 +2,11 @@
   height: 100vh;
 }
 
+a {
+  text-decoration: none !important;
+  color: rgb(232, 232, 232) !important;
+}
+
 .font-karla {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;

@@ -1,9 +1,10 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Home } from "./pages/Home";
+import { rotas } from "./router";
+import { RouterProvider } from "react-router-dom";
 
 function App() {
-  return <Home></Home>;
+  return <RouterProvider router={rotas} />;
 }
 
 export default App;
