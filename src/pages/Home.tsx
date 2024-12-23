@@ -21,16 +21,18 @@ export function Home() {
               <div>2023</div>
             </div>
           </Link>
-          <div>
-            <img
-              src="./home-picture-2.png"
-              alt="Project navigation for shopping centers"
-            />
-            <h4 className="font-varela-round" style={{ paddingTop: "22px" }}>
-              Navigation app for shopping centers - Click to see more!
-            </h4>
-            <div>2024</div>
-          </div>
+          <Link to={"/project/shopping-center"}>
+            <div style={{ color: mainColors.blackLetters }}>
+              <img
+                src="./home-picture-2.png"
+                alt="Project navigation for shopping centers"
+              />
+              <h4 className="font-varela-round" style={{ paddingTop: "22px" }}>
+                Navigation app for shopping centers - Click to see more!
+              </h4>
+              <div>2024</div>
+            </div>
+          </Link>
         </section>
       </div>
     </>

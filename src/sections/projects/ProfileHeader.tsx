@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { ProfileImage } from "../../components/ProfileImage";
 
-export function ProfileHeader() {
+export function ProfileHeader({ color }: { color?: string }) {
+  console.log("color: ", color);
   return (
     <>
       <div
@@ -10,11 +11,18 @@ export function ProfileHeader() {
       >
         <ProfileImage imgSize="50px" />
         <div className="d-flex flex-column">
-          <Link style={{ marginBottom: "-5px" }} to={"/"}>
-            Julia
+          <Link style={{}} to={"/"}>
+            <p
+              style={{
+                color: color ? `${color}` : "",
+                marginBottom: "-5px",
+              }}
+            >
+              Julia
+            </p>
           </Link>
           <Link to={"/"} className="d-block" style={{ fontSize: "12px" }}>
-            <em>UX designer</em>
+            <em style={{ color: color ? `${color}` : "" }}>UX designer</em>
           </Link>
         </div>
       </div>
