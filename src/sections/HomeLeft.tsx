@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { mainColors } from "../utils/colors";
 import { useLocation } from "react-router-dom";
 import { RedirectionButtons } from "./RedirectionButtons";
+import { ProfileImage } from "../components/ProfileImage";
 
 const profilePictureSize = "145px";
 
@@ -28,18 +29,7 @@ function HomeLeft() {
       id="left-home"
     >
       <div className="d-flex flex-column justify-content-center align-items-center">
-        <div>
-          <img
-            src="https://storage.googleapis.com/uxfolio/66e0c774b0349900027d9a16/portfolios/078b3ec3-5259-4c0d-b4a5-bc73c915c215/Fk1oLRDzOW6vZzuR.jpeg"
-            alt="Profile Picture"
-            style={{
-              width: profilePictureSize,
-              height: profilePictureSize,
-              borderRadius: "50%",
-              marginBottom: "40px",
-            }}
-          />
-        </div>
+        <ProfileImage />
         <RedirectionButtons />
         <h1 style={{ marginBottom: "22px" }}>Julia</h1>
         <div style={{ marginBottom: "60px", textAlign: "center" }}>

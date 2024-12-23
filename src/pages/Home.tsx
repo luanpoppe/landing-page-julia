@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import HomeLeft from "../sections/HomeLeft";
+import { mainColors } from "../utils/colors";
 
 export function Home() {
   return (
@@ -10,13 +12,15 @@ export function Home() {
           id="right-home"
           style={{ marginTop: "10%", marginRight: "10%", marginLeft: "10%" }}
         >
-          <div>
-            <img src="./home-picture-1.png" alt="Project Sanar" />
-            <h4 className="font-varela-round" style={{ paddingTop: "22px" }}>
-              Rebranding for all Sanar's Landing Pages - Click to see more!
-            </h4>
-            <div>2023</div>
-          </div>
+          <Link to={"/project/sanar"}>
+            <div style={{ color: mainColors.blackLetters }}>
+              <img src="./home-picture-1.png" alt="Project Sanar" />
+              <h4 className="font-varela-round" style={{ paddingTop: "22px" }}>
+                Rebranding for all Sanar's Landing Pages - Click to see more!
+              </h4>
+              <div>2023</div>
+            </div>
+          </Link>
           <div>
             <img
               src="./home-picture-2.png"

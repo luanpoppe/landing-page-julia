@@ -2,7 +2,7 @@ import { FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import styled from "styled-components";
 import { mainColors } from "../utils/colors";
 
-const Botao = styled.a`
+const Button = styled.a`
   text-decoration: none;
   opacity: 100%;
   border: 1px solid #ffffff24;
@@ -24,15 +24,15 @@ export function RedirectionButtons() {
       className="d-flex justify-content-center"
       style={{ gap: "10px", marginBottom: "24px" }}
     >
-      <Botao href="">
+      <Button href="">
         <FaLinkedinIn />
-      </Botao>
-      <Botao href="">
+      </Button>
+      <Button href="">
         <FaWhatsapp />
-      </Botao>
-      <Botao href="">
+      </Button>
+      <Button href="">
         <FaInstagram />
-      </Botao>
+      </Button>
     </div>
   );
 }

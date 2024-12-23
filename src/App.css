@@ -22,3 +22,14 @@ a {
   font-size: 22px;
   line-height: 30px;
 }
+
+.w-60 {
+  width: 60%;
+}
+
+.transition {
+  transition-property: opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+  /* transition: opacity 0.25s linear - Não sei pq não funcionou*/
+}
