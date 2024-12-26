@@ -1,4 +1,4 @@
-import HomeLeft from "../sections/HomeLeft";
+import HomeLeft from "../sections/HomeLeft/HomeLeft";
 import { mainColors } from "../utils/colors";
 
 export function Contact() {

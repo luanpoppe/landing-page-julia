@@ -1,5 +1,17 @@
+* {
+  box-sizing: border-box;
+  scrollbar-color: #7d7d7d #fafafa;
+  scrollbar-width: thin;
+}
+
 #root {
   height: 100vh;
+}
+
+@media (min-width: 768px) {
+  #root {
+    overflow-y: hidden;
+  }
 }
 
 a {
@@ -27,9 +39,24 @@ a {
   width: 60%;
 }
 
+.h-60 {
+  height: 60%;
+}
+
 .transition {
   transition-property: opacity;
   transition-duration: 0.25s;
   transition-timing-function: linear;
   /* transition: opacity 0.25s linear - Não sei pq não funcionou*/
+}
+
+.custom-transition {
+  transition-property: opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+  /* transition: opacity 0.25s linear - Não sei pq não funcionou*/
+}
+
+.clickable {
+  cursor: pointer;
 }

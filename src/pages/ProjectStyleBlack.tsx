@@ -27,7 +27,7 @@ export function ProjectStyleBlack(props: Props) {
   }
 
   return (
-    <main className="d-flex flex-column">
+    <main className="d-flex flex-column" data-aos="fade">
       <BlackSection />
       <WhiteSection />
 
