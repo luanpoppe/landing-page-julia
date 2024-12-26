@@ -1,15 +1,19 @@
+import { ContactForm } from "../sections/ContactForm";
 import HomeLeft from "../sections/HomeLeft/HomeLeft";
-import { mainColors } from "../utils/colors";
+import { handleOverflow } from "../utils/handle-overflow";
 
 export function Contact() {
+  window.addEventListener("resize", handleOverflow);
+  handleOverflow();
+
   return (
-    <div className="d-lg-flex h-100">
+    <div className="d-flex flex-column flex-md-row h-100" id="contact-page">
       <HomeLeft />
 
       <section
-        className="d-lg-flex justify-content-center gap-5 text-center"
+        className="d-block d-lg-flex justify-content-center gap-5 text-center"
         id="right-home"
-        style={{ margin: "5% 7%" }}
+        style={{ padding: "5% 5%" }}
       >
         <div>
           <img
@@ -19,91 +23,18 @@ export function Contact() {
             alt="Personal picture"
           />
         </div>
-        <div className="col-6 text-start">
-          <div className="font-varela-round" style={{ marginBottom: "20px" }}>
+        <div className="col-12 col-lg-6 text-start">
+          <div
+            className="font-varela-round mt-3 mt-lg-0"
+            style={{ marginBottom: "20px" }}
+          >
             Get in touch!
           </div>
           <div style={{ marginBottom: "30px" }}>
             Do you have a product idea, want to discuss a project, or need a
             designer? Drop me an email!
           </div>
-          <form
-            style={{ fontSize: "14px" }}
-            className="d-flex justify-content-center flex-column"
-          >
-            <div
-              className="d-flex flex-column"
-              style={{ marginBottom: "20px" }}
-            >
-              <label className="mb-2" htmlFor="email">
-                Email
-              </label>
-              <input
-                id="email"
-                placeholder="Your email"
-                type="email"
-                style={{
-                  padding: "14px 16px",
-                  borderRadius: "1px",
-                  border: `1px solid ${mainColors.whiteLetters}`,
-                }}
-              />
-            </div>
-
-            <div
-              className="d-flex flex-column"
-              style={{ marginBottom: "20px" }}
-            >
-              <label className="mb-2" htmlFor="name">
-                Name
-              </label>
-              <input
-                id="name"
-                placeholder="Your name"
-                type="text"
-                style={{
-                  padding: "14px 16px",
-                  borderRadius: "1px",
-                  border: `1px solid ${mainColors.whiteLetters}`,
-                }}
-              />
-            </div>
-
-            <div
-              className="d-flex flex-column"
-              style={{ marginBottom: "10px" }}
-            >
-              <label className="mb-2" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                id="message"
-                placeholder="Write your message here..."
-                style={{
-                  resize: "none",
-                  height: "260px",
-                  padding: "14px 16px",
-                  borderRadius: "1px",
-                  border: `1px solid ${mainColors.whiteLetters}`,
-                }}
-              />
-            </div>
-
-            <div className="d-flex mt-5">
-              <button
-                className="col-6 font-karla"
-                style={{
-                  fontWeight: "600",
-                  borderRadius: "1000px",
-                  padding: "10px 32px",
-                  backgroundColor: mainColors.grey,
-                  border: "none",
-                }}
-              >
-                Send email
-              </button>
-            </div>
-          </form>
+          <ContactForm />
         </div>
       </section>
     </div>

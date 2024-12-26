@@ -16,8 +16,10 @@ const HomeLeftStyled = styled.section`
   margin-bottom: 24px;
   width: 35%;
   height: 100%;
+  min-height: 100vh;
 
   @media (max-width: 767px) {
+    min-height: 75%;
     height: 75%;
     width: 100%;
     margin-bottom: 24px;
@@ -58,10 +60,7 @@ function HomeLeft() {
         </Link>
         <FiMenu size={24} onClick={handleOpenMenu} className="clickable" />
       </nav>
-      <div
-        className="d-flex flex-column justify-content-center align-items-center"
-        data-aos="fade"
-      >
+      <div className="d-flex flex-column justify-content-center align-items-center">
         <ProfileImage />
         <RedirectionButtons />
         <h1 style={{ marginBottom: "22px" }}>Julia</h1>

@@ -17,7 +17,6 @@ export function ProjectStyleBlack(props: Props) {
   const buttonScrollTop = useRef<HTMLDivElement>(null);
 
   window.addEventListener("scroll", () => {
-    console.log("window.scrollY: ", window.scrollY);
     if (window.scrollY > 500) setButtonShouldAppear(true);
     else setButtonShouldAppear(false);
   });
