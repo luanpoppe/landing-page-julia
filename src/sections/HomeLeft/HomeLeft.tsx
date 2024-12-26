@@ -13,16 +13,13 @@ const HomeLeftStyled = styled.section`
   background-color: ${mainColors.purple};
   color: ${mainColors.whiteLetters};
   padding: 40px;
-  height: 60%;
   margin-bottom: 24px;
-  @media (min-width: 768px) {
-    width: 35%;
-    height: 100%;
-    /* position: sticky; */
-  }
+  width: 35%;
+  height: 100%;
 
   @media (max-width: 767px) {
     height: 75%;
+    width: 100%;
     margin-bottom: 24px;
   }
 `;
@@ -55,7 +52,7 @@ function HomeLeft() {
         setIsMenuOpen={setIsMenuOpen}
         isHomeOrContact={isHomeOrContact}
       />
-      <nav className="d-flex justify-content-between w-100 d-lg-none">
+      <nav className="d-flex justify-content-between w-100 d-md-none">
         <Link to={"/"}>
           <h5>Julia</h5>
         </Link>
@@ -75,7 +72,7 @@ function HomeLeft() {
         </div>
       </div>
 
-      <div className="d-none d-lg-block" data-aos="fade-up">
+      <div className="d-none d-md-block">
         <HomeContactButtons
           isHomeOrContact={isHomeOrContact}
           isMenuOpen={isMenuOpen}
