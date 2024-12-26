@@ -39,6 +39,7 @@ export function MenuMobile({
           <HomeContactButtons
             isHomeOrContact={isHomeOrContact}
             isMenuOpen={isMenuOpen}
+            onClick={handleCloseMenu}
           />
         </div>
       </div>

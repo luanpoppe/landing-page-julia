@@ -3,11 +3,11 @@ import { mainColors } from "../utils/colors";
 
 export function Contact() {
   return (
-    <div className="d-flex h-100">
+    <div className="d-lg-flex h-100">
       <HomeLeft />
 
       <section
-        className="d-flex justify-content-center gap-5 text-center"
+        className="d-lg-flex justify-content-center gap-5 text-center"
         id="right-home"
         style={{ margin: "5% 7%" }}
       >
