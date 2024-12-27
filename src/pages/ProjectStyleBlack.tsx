@@ -1,7 +1,4 @@
 import { PropsWithChildren, useRef, useState } from "react";
-import { mainColors } from "../utils/colors";
-import { ProfileHeader } from "../sections/projects/ProfileHeader";
-import { Link } from "react-router-dom";
 import { FaArrowUpLong } from "react-icons/fa6";
 import styled from "styled-components";
 import { BlackSection } from "../sections/ProjectStyleBlack/BlackSection";
@@ -40,7 +37,7 @@ export function ProjectStyleBlack(props: Props) {
       <BlackSection />
       <WhiteSection />
 
-      {/* <div
+      <div
         ref={buttonScrollTop}
         onClick={clickButtonScrollTop}
         className="transition d-flex justify-content-center align-items-center"
@@ -59,7 +56,7 @@ export function ProjectStyleBlack(props: Props) {
         }}
       >
         <FaArrowUpLong color="white" size={20} />
-      </div> */}
+      </div>
     </ProjectStyleBlackStyled>
   );
 }
