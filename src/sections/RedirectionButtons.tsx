@@ -24,13 +24,19 @@ export function RedirectionButtons() {
       className="d-flex justify-content-center"
       style={{ gap: "10px", marginBottom: "24px" }}
     >
-      <Button href="">
+      <Button
+        href="https://www.linkedin.com/in/juliasuarezferreira/"
+        target="_blank"
+      >
         <FaLinkedinIn />
       </Button>
-      <Button href="">
+      <Button
+        href="https://api.whatsapp.com/send/?phone=71987217106&text&type=phone_number&app_absent=0"
+        target="_blank"
+      >
         <FaWhatsapp />
       </Button>
-      <Button href="">
+      <Button href="https://www.instagram.com/juliasferreira" target="_blank">
         <FaInstagram />
       </Button>
     </div>
