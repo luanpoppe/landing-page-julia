@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import { mainColors } from "../../utils/colors";
 import { ProfileHeader } from "../projects/ProfileHeader";
-import { ProjectImage } from "./ProjectImage";
 
-const BlackSectionSyled = styled.section`
+const InitialSectionSyled = styled.section`
   display: flex;
   justify-content: center;
-  background-color: ${mainColors.blackBackground};
   width: 100%;
   font-size: 30px;
 
@@ -18,7 +16,6 @@ const BlackSectionSyled = styled.section`
 `;
 
 const TitleAndImageStyled = styled.section`
-  color: ${mainColors.whiteLetters};
   max-height: 100vh;
 
   @media (min-width: 992px) {
@@ -26,36 +23,45 @@ const TitleAndImageStyled = styled.section`
   }
 `;
 
-export function BlackSection() {
+export function InitialSection() {
   return (
-    <BlackSectionSyled className="projects-paddings w-100">
+    <InitialSectionSyled className="projects-paddings">
       <div
         style={{
           paddingBottom: "8%",
           maxWidth: "1188px",
+          color: `${mainColors.blackLetters}`,
         }}
       >
-        <ProfileHeader />
+        <ProfileHeader color={mainColors.blackLetters} />
 
         <TitleAndImageStyled className="d-flex flex-column flex-lg-row align-items-center gap-5 mt-4 mt-lg-5">
           <div
-            className="col-12 col-lg-6 font-varela-round"
+            className="col-12 col-lg-8 font-varela-round"
             style={{ fontSize: "inherit", lineHeight: "inherit" }}
           >
-            Rebranding for all of Sanar's Landing Pages in post-graduation
-            courses
+            Navigation app for shopping centers
             <span
-              className="d-block mt-3 mt-lg-0"
-              style={{ fontSize: "16px", fontWeight: "regular" }}
+              className="d-block mt-3"
+              style={{
+                fontSize: "16px",
+                fontWeight: "regular",
+                color: "rgb(107, 107, 107)",
+                lineHeight: "initial",
+              }}
             >
-              2023
+              UX/UI Design case study for EBAC - user researching and
+              prototyping
             </span>
           </div>
-          <div className="col-12 col-lg-6">
-            <ProjectImage />
+          <div className="col-12 col-lg-4 d-flex justify-content-center">
+            <img
+              src="../imagem-projeto-shopping-center.png"
+              alt="Sopping Center Image"
+            />
           </div>
         </TitleAndImageStyled>
       </div>
-    </BlackSectionSyled>
+    </InitialSectionSyled>
   );
 }
