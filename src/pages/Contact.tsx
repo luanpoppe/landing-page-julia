@@ -1,10 +1,11 @@
+import { useEffect } from "react";
 import { ContactForm } from "../sections/ContactForm";
 import HomeLeft from "../sections/HomeLeft/HomeLeft";
 import { handleOverflow } from "../utils/handle-overflow";
 
 export function Contact() {
   window.addEventListener("resize", handleOverflow);
-  handleOverflow();
+  useEffect(handleOverflow, []);
 
   return (
     <div className="d-flex flex-column flex-md-row h-100" id="contact-page">
@@ -23,7 +24,7 @@ export function Contact() {
             alt="Personal picture"
           />
         </div>
-        <div className="col-12 col-lg-6 text-start">
+        <div className="col-12 col-lg-6 text-start h-100">
           <div
             className="font-varela-round mt-3 mt-lg-0"
             style={{ marginBottom: "20px" }}

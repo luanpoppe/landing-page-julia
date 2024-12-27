@@ -2,10 +2,11 @@ import HomeLeft from "../sections/HomeLeft/HomeLeft";
 import { HomeRight } from "../sections/projects/HomeRight/HomeRight";
 import Aos from "aos";
 import { handleOverflow } from "../utils/handle-overflow";
+import { useEffect } from "react";
 
 export function Home() {
   window.addEventListener("resize", handleOverflow);
-  handleOverflow();
+  useEffect(handleOverflow, []);
 
   Aos.init({
     duration: 2000,

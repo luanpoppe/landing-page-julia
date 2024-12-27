@@ -4,6 +4,14 @@ export function handleOverflow() {
   const contactPage = document.getElementById("contact-page") as HTMLElement;
   const imageAndForm = document.getElementById("right-home") as HTMLElement;
 
+  if (window.innerWidth >= 992) {
+    console.log("CHEGOU AQUIIIIIII");
+    console.log("imageAndForm: ", imageAndForm);
+    if (imageAndForm) imageAndForm.style.maxHeight = "100vh";
+  } else {
+    if (imageAndForm) imageAndForm.style.maxHeight = "";
+  }
+
   if (window.innerWidth >= 768) {
     body.style.overflow = "hidden";
     root.style.overflow = "hidden";
@@ -12,6 +20,7 @@ export function handleOverflow() {
   } else if (window.innerWidth < 768) {
     if (contactPage) contactPage.style.overflow = "scroll";
     if (imageAndForm) imageAndForm.style.overflow = "hidden";
+    body.style.overflow = "scroll";
     root.style.overflow = "scroll";
   }
 }
