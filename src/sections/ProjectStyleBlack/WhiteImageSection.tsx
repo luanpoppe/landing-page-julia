@@ -1,11 +1,11 @@
-export function ProjectImageWhite() {
+export function WhiteImageSection() {
   return (
     <svg
       style={{ maxWidth: "100%", maxHeight: "100%" }}
       fill="none"
       viewBox="0 0 2016 1730"
-      height="500"
-      width="2016"
+      height="100%"
+      width="100%"
       xmlns="http://www.w3.org/2000/svg"
     >
       <mask id="path-1-inside-1_1103_704" fill="white">

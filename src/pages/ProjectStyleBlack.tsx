@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FaArrowUpLong } from "react-icons/fa6";
 import styled from "styled-components";
 import { BlackSection } from "../sections/ProjectStyleBlack/BlackSection";
+import { WhiteSection } from "../sections/ProjectStyleBlack/WhiteSection";
 
 type Props = PropsWithChildren & {
   tituloDoProjeto: string;
@@ -37,7 +38,7 @@ export function ProjectStyleBlack(props: Props) {
   return (
     <ProjectStyleBlackStyled>
       <BlackSection />
-      {/* <WhiteSection /> */}
+      <WhiteSection />
 
       {/* <div
         ref={buttonScrollTop}

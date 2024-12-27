@@ -73,3 +73,14 @@ a {
     padding: 5%;
   }
 }
+
+.wrapper {
+  height: 100%;
+}
+
+.scrollable-container-mockup {
+  height: 100%;
+  overflow-y: auto;
+  pointer-events: all;
+  scrollbar-width: none;
+}
