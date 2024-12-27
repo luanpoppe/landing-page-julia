@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { mainColors } from "../../../utils/colors";
 import styled from "styled-components";
-import React from "react";
 
 const HomeRightStyled = styled.section`
   max-width: 1248px;
