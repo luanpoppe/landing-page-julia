@@ -2,10 +2,13 @@ import { useEffect } from "react";
 import { ContactForm } from "../sections/ContactForm";
 import HomeLeft from "../sections/HomeLeft/HomeLeft";
 import { handleOverflow } from "../utils/handle-overflow";
+import { useLocation } from "react-router-dom";
 
 export function Contact() {
-  window.addEventListener("resize", handleOverflow);
-  useEffect(handleOverflow, []);
+  const location = useLocation();
+  window.removeEventListener("resize", () => handleOverflow(location.pathname));
+  window.addEventListener("resize", () => handleOverflow(location.pathname));
+  useEffect(() => handleOverflow(location.pathname), []);
 
   return (
     <div className="d-flex flex-column flex-md-row h-100" id="contact-page">

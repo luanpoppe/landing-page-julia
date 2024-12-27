@@ -5,11 +5,8 @@ export function ProfileHeader({ color }: { color?: string }) {
   console.log("color: ", color);
   return (
     <>
-      <div
-        className="d-flex align-items-center"
-        style={{ paddingTop: "40px", gap: "10px" }}
-      >
-        <ProfileImage imgSize="50px" />
+      <div className="d-flex align-items-center" style={{ gap: "10px" }}>
+        <ProfileImage isInHeader={true} imgSize="50px" />
         <div className="d-flex flex-column">
           <Link style={{}} to={"/"}>
             <p

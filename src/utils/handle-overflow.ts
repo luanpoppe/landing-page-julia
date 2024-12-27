@@ -1,11 +1,18 @@
-export function handleOverflow() {
+export function handleOverflow(path: string) {
+  console.log("path: ", path);
+
   const root = document.getElementById("root") as HTMLDivElement;
   const body = document.getElementsByTagName("body")[0] as HTMLBodyElement;
   const contactPage = document.getElementById("contact-page") as HTMLElement;
   const imageAndForm = document.getElementById("right-home") as HTMLElement;
 
+  if (path != "/" && path != "/contact") {
+    body.style.overflow = "";
+    root.style.overflow = "";
+    return;
+  }
+
   if (window.innerWidth >= 992) {
-    console.log("CHEGOU AQUIIIIIII");
     console.log("imageAndForm: ", imageAndForm);
     if (imageAndForm) imageAndForm.style.maxHeight = "100vh";
   } else {

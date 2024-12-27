@@ -4,9 +4,11 @@
   scrollbar-width: thin;
 }
 
-#root, body {
+#root,
+body {
   min-height: 100vh;
   height: 100%;
+  min-width: 100vw;
 }
 
 @media (min-width: 768px) {
@@ -60,4 +62,14 @@ a {
 
 .clickable {
   cursor: pointer;
+}
+
+.projects-paddings {
+  padding: 4%;
+}
+
+@media (min-width: 992px) {
+  .projects-paddings {
+    padding: 5%;
+  }
 }
