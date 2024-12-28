@@ -24,6 +24,10 @@ const HomeLeftStyled = styled.section`
     width: 100%;
     margin-bottom: 24px;
   }
+
+  @media (min-width: 992px) {
+    margin-bottom: 0px;
+  }
 `;
 
 function HomeLeft() {
