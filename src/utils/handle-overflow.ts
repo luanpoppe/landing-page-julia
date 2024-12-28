@@ -1,6 +1,4 @@
 export function handleOverflow(path: string) {
-  console.log("path: ", path);
-
   const root = document.getElementById("root") as HTMLDivElement;
   const body = document.getElementsByTagName("body")[0] as HTMLBodyElement;
   const contactPage = document.getElementById("contact-page") as HTMLElement;
@@ -13,7 +11,6 @@ export function handleOverflow(path: string) {
   }
 
   if (window.innerWidth >= 992) {
-    console.log("imageAndForm: ", imageAndForm);
     if (imageAndForm) imageAndForm.style.maxHeight = "100vh";
   } else {
     if (imageAndForm) imageAndForm.style.maxHeight = "";

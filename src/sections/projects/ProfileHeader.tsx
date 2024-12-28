@@ -9,7 +9,6 @@ const ProfileHeaderMargin = styled(Link)`
 `;
 
 export function ProfileHeader({ color }: { color?: string }) {
-  console.log("color: ", color);
   return (
     <>
       <div className="d-flex align-items-center" style={{ gap: "10px" }}>

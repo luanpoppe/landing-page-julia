@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
 import { mainColors } from "../../utils/colors";
 import { HorizontalProjectSection } from "../projects/HorizontalProjectSection";
 import { WhiteImageSection } from "./WhiteImageSection";
 import styled from "styled-components";
 import { Row3Images } from "./Row3Images";
+import { ReadMoreAndContact } from "../projects/ReadMoreAndContact";
 
 const Personas = styled(HorizontalProjectSection)`
   width: 100%;
@@ -16,16 +16,6 @@ const RowImage = styled.div`
   width: 100%;
   @media (min-width: 992px) {
     width: 45%;
-  }
-`;
-
-const EmailSize = styled.h1`
-  font-weight: 700;
-  font-size: 30px;
-  margin-bottom: 20px;
-
-  @media (max-width: 360px) {
-    font-size: 18px;
   }
 `;
 
@@ -135,36 +125,12 @@ export function WhiteSection() {
         </p>
       </Personas>
 
-      <HorizontalProjectSection className="d-flex flex-column align-items-center">
-        <h3 className="mb-5">Read more of my case studies</h3>
-        <div style={{ maxWidth: "150px" }}>
-          <Link to={""}>
-            <img
-              style={{ maxWidth: "150px", maxHeight: "150px" }}
-              src="../home-picture-2.png"
-              alt="Project navigation for shopping centers"
-            />
-            <p style={{ marginTop: "30px", color: mainColors.blackLetters }}>
-              Navigation app for shopping centers - Click to see more!
-            </p>
-          </Link>
-        </div>
-      </HorizontalProjectSection>
-
-      <HorizontalProjectSection>
-        <p style={{ marginBottom: "28px" }}>Get in touch</p>
-
-        <EmailSize className="font-varela-round">
-          <strong>julia.suarezf@gmail.com</strong>
-        </EmailSize>
-
-        <p style={{ marginBottom: "132px" }}>
-          <em>
-            (all project was translated from Portuguese to English, except for
-            the images).
-          </em>
-        </p>
-      </HorizontalProjectSection>
+      <ReadMoreAndContact
+        linkUrl="/project/shopping-center"
+        imageAlt="Project navigation for shopping centers"
+        imageSrc="../home-picture-2.png"
+        imageText="Navigation app for shopping centers - Click to see more!"
+      />
     </section>
   );
 }
