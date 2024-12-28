@@ -23,10 +23,10 @@
 
 .grow-on-hover {
   scale: 1;
-  transition: scale 0.5s ease-in-out;
+  transition: scale 0.2s ease-in-out;
 }
 
 .grow-on-hover:hover {
-  scale: 1.1;
-  transition: scale 0.5s ease-in-out;
+  scale: 1.05;
+  transition: scale 0.2s ease-in-out;
 }
