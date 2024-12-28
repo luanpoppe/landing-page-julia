@@ -19,6 +19,7 @@ export function MenuMobile({
   {
     return isMenuOpen ? (
       <div
+        className="load-menu"
         style={{
           backgroundColor: mainColors.purple,
           width: "100vw",

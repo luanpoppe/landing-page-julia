@@ -7,3 +7,26 @@
   opacity: 1;
 }
 
+@keyframes load-menu {
+  from {
+    transform: translateY(-500px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.load-menu {
+  animation: load-menu 0.5s;
+}
+
+.grow-on-hover {
+  scale: 1;
+  transition: scale 0.5s ease-in-out;
+}
+
+.grow-on-hover:hover {
+  scale: 1.1;
+  transition: scale 0.5s ease-in-out;
+}

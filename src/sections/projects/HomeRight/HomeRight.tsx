@@ -24,7 +24,11 @@ export function HomeRight() {
     >
       <Link className="hidden col-12 col-xl-6 h-60" to={"/project/sanar"}>
         <div style={{ color: mainColors.blackLetters }}>
-          <img src="./home-picture-1.png" alt="Project Sanar" />
+          <img
+            src="./home-picture-1.png"
+            alt="Project Sanar"
+            className="grow-on-hover"
+          />
           <h4 className="font-varela-round" style={{ paddingTop: "22px" }}>
             Rebranding for all Sanar's Landing Pages - Click to see more!
           </h4>
@@ -37,6 +41,7 @@ export function HomeRight() {
       >
         <div style={{ color: mainColors.blackLetters }}>
           <img
+            className="grow-on-hover"
             src="./home-picture-2.png"
             alt="Project navigation for shopping centers"
           />
