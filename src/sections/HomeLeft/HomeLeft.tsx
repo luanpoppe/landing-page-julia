@@ -64,7 +64,8 @@ function HomeLeft() {
         </Link>
         <FiMenu size={24} onClick={handleOpenMenu} className="clickable" />
       </nav>
-      <div className="d-flex flex-column justify-content-center align-items-center">
+
+      <div className="d-flex flex-column justify-content-center align-items-center hidden">
         <ProfileImage />
         <RedirectionButtons />
         <h1 style={{ marginBottom: "22px" }}>Julia</h1>

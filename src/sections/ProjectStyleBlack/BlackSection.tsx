@@ -37,7 +37,7 @@ export function BlackSection() {
       >
         <ProfileHeader />
 
-        <TitleAndImageStyled className="d-flex flex-column flex-lg-row align-items-center gap-5 mt-4 mt-lg-5">
+        <TitleAndImageStyled className="d-flex flex-column flex-lg-row align-items-center gap-5 mt-4 mt-lg-5 hidden">
           <div
             className="col-12 col-lg-6 font-varela-round"
             style={{ fontSize: "inherit", lineHeight: "inherit" }}

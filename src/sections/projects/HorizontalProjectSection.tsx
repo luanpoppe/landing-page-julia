@@ -3,7 +3,7 @@ export function HorizontalProjectSection({
   className,
 }: React.PropsWithChildren & { className?: string }) {
   return (
-    <div style={{ padding: "50px 0" }} className={className}>
+    <div style={{ padding: "50px 0" }} className={className + " hidden"}>
       {children}
     </div>
   );

@@ -11,7 +11,7 @@ const ProfileHeaderMargin = styled(Link)`
 export function ProfileHeader({ color }: { color?: string }) {
   return (
     <>
-      <div className="d-flex align-items-center" style={{ gap: "10px" }}>
+      <div className="d-flex align-items-center hidden" style={{ gap: "10px" }}>
         <ProfileImage isInHeader={true} imgSize="50px" />
         <div
           className="d-flex flex-column justify-content-center"

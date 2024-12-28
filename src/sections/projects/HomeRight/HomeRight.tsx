@@ -22,7 +22,7 @@ export function HomeRight() {
       className="overflow-y-scroll text-center w-100 d-flex flex-column aling-items-center flex-xl-row gap-5 gap-xl-0"
       id="right-home"
     >
-      <Link className="col-12 col-xl-6 h-60" to={"/project/sanar"}>
+      <Link className="hidden col-12 col-xl-6 h-60" to={"/project/sanar"}>
         <div style={{ color: mainColors.blackLetters }}>
           <img src="./home-picture-1.png" alt="Project Sanar" />
           <h4 className="font-varela-round" style={{ paddingTop: "22px" }}>
@@ -31,7 +31,10 @@ export function HomeRight() {
           <div>2023</div>
         </div>
       </Link>
-      <Link className="col-12 col-xl-6 h-60" to={"/project/shopping-center"}>
+      <Link
+        className="hidden col-12 col-xl-6 h-60"
+        to={"/project/shopping-center"}
+      >
         <div style={{ color: mainColors.blackLetters }}>
           <img
             src="./home-picture-2.png"

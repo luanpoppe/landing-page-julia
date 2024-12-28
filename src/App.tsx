@@ -1,4 +1,5 @@
 import "./App.css";
+import "./utils/animate.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.min";
 import { rotas } from "./router";

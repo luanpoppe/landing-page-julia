@@ -1,10 +1,9 @@
-import { PropsWithChildren, useEffect } from "react";
+import { PropsWithChildren } from "react";
 import { InitialSection } from "../sections/ProjectStyleWhite/InitialSection";
 import { DetailsSection } from "../sections/ProjectStyleWhite/DetailsSection";
 import styled from "styled-components";
 import { ScrollTopButton } from "../components/ScrollTopButton";
-import { handleOverflow } from "../utils/handle-overflow";
-import { useLocation } from "react-router-dom";
+import { useCustomLoadPage } from "../utils/custom-hooks";
 
 type Props = PropsWithChildren & {
   tituloDoProjeto: string;
@@ -18,11 +17,8 @@ const ProjectStyleWhiteStyled = styled.main`
 `;
 
 export function ProjectStyleWhite(props: Props) {
-  const location = useLocation();
+  useCustomLoadPage();
 
-  window.removeEventListener("resize", () => handleOverflow(location.pathname));
-  window.addEventListener("resize", () => handleOverflow(location.pathname));
-  useEffect(() => handleOverflow(location.pathname), []);
   return (
     <ProjectStyleWhiteStyled>
       <InitialSection />

@@ -4,7 +4,7 @@ export function ContactForm() {
   return (
     <form
       style={{ fontSize: "14px" }}
-      className="d-flex justify-content-center flex-column"
+      className="d-flex justify-content-center flex-column hidden"
     >
       <div className="d-flex flex-column" style={{ marginBottom: "20px" }}>
         <label className="mb-2" htmlFor="email">
