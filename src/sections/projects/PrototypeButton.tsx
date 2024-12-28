@@ -9,6 +9,12 @@ const Style = styled.a`
   height: 46px;
   width: 140px;
   font-size: 16px !important;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: #d6d1ffa2;
+    transition: all 0.5s;
+  }
 `;
 
 export function PrototypeButton() {

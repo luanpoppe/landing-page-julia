@@ -30,3 +30,22 @@
   scale: 1.05;
   transition: scale 0.2s ease-in-out;
 }
+
+@keyframes opacity-animation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+dialog {
+  animation: opacity-animation 0.5s;
+}
+
+dialog::backdrop {
+  animation: opacity-animation 0.5s;
+  background-color: rgba(0, 0, 0, 0.8);
+}

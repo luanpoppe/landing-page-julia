@@ -16,41 +16,70 @@ const HomeRightStyled = styled.section`
   }
 `;
 
+const ProjectStyles = styled(Link)`
+  @media (min-width: 992px) and (max-width: 1199px) {
+    margin-bottom: 120px;
+  }
+`;
+
 export function HomeRight() {
   return (
     <HomeRightStyled
-      className="overflow-y-scroll text-center w-100 d-flex flex-column aling-items-center flex-xl-row gap-5 gap-xl-0"
+      className="overflow-y-scroll text-center w-100 d-flex flex-column aling-items-center flex-xl-row gap-5 gap-xl-2"
       id="right-home"
     >
-      <Link className="hidden col-12 col-xl-6 h-60" to={"/project/sanar"}>
+      <ProjectStyles
+        className="hidden col-12 col-xl-6 h-60"
+        to={"/project/sanar"}
+      >
         <div style={{ color: mainColors.blackLetters }}>
           <img
             src="./home-picture-1.png"
             alt="Project Sanar"
             className="grow-on-hover"
+            style={{
+              width: "100%",
+              maxWidth: "400px",
+              maxHeight: "400px",
+            }}
           />
-          <h4 className="font-varela-round" style={{ paddingTop: "22px" }}>
-            Rebranding for all Sanar's Landing Pages - Click to see more!
-          </h4>
-          <div>2023</div>
+          <div className="d-flex flex-column align-items-center justify-content-center">
+            <h4
+              className="font-varela-round text-center"
+              style={{ paddingTop: "22px", width: "80%" }}
+            >
+              Rebranding for all Sanar's Landing Pages - Click to see more!
+            </h4>
+            <div>2023</div>
+          </div>
         </div>
-      </Link>
-      <Link
+      </ProjectStyles>
+      <ProjectStyles
         className="hidden col-12 col-xl-6 h-60"
         to={"/project/shopping-center"}
       >
         <div style={{ color: mainColors.blackLetters }}>
           <img
-            className="grow-on-hover"
             src="./home-picture-2.png"
             alt="Project navigation for shopping centers"
+            className="grow-on-hover"
+            style={{
+              width: "100%",
+              maxWidth: "400px",
+              maxHeight: "400px",
+            }}
           />
-          <h4 className="font-varela-round" style={{ paddingTop: "22px" }}>
-            Navigation app for shopping centers - Click to see more!
-          </h4>
-          <div>2024</div>
+          <div className="d-flex flex-column align-items-center justify-content-center">
+            <h4
+              className="font-varela-round text-center"
+              style={{ paddingTop: "22px", width: "80%" }}
+            >
+              Navigation app for shopping centers - Click to see more!
+            </h4>
+            <div>2024</div>
+          </div>
         </div>
-      </Link>
+      </ProjectStyles>
     </HomeRightStyled>
   );
 }
