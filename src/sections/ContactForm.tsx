@@ -13,17 +13,20 @@ export function ContactForm({ isEmailSent }: { isEmailSent: boolean }) {
     const name = document.querySelector<HTMLInputElement>("#name")?.value;
     const message = document.querySelector<HTMLInputElement>("#message")?.value;
 
-    fetch("http://localhost:8005/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        emailFrom,
-        name,
-        message,
-      }),
-    }).then((res) => {
+    fetch(
+      "https://email-server-julia-git-main-luanpoppes-projects.vercel.app/api/email.js",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          emailFrom,
+          name,
+          message,
+        }),
+      }
+    ).then((res) => {
       res.json().then((res) => {
         console.log("res: ", res);
       });
