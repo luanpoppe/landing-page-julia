@@ -7,6 +7,7 @@ require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 const PORT = process.env.PORT || 8005;
+console.log("PORT: ", PORT);
 
 app.post("/email", (req, res) => {
   const { emailFrom, name, message } = req.body;
