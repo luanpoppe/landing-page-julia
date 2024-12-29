@@ -1,7 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { mainColors } from "../utils/colors";
+import { LoadingSpinner } from "../components/LoadingSpinner";
+import { useNavigate } from "react-router-dom";
 
 export function ContactForm({ isEmailSent }: { isEmailSent: boolean }) {
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   useEffect(() => {
     if (isEmailSent) {
       document.getElementById("message-sent")?.scrollIntoView();
@@ -9,6 +13,7 @@ export function ContactForm({ isEmailSent }: { isEmailSent: boolean }) {
   }, []);
 
   function sendEmail() {
+    setIsLoading(true);
     const emailFrom = document.querySelector<HTMLInputElement>("#email")?.value;
     const name = document.querySelector<HTMLInputElement>("#name")?.value;
     const message = document.querySelector<HTMLInputElement>("#message")?.value;
@@ -27,14 +32,17 @@ export function ContactForm({ isEmailSent }: { isEmailSent: boolean }) {
         }),
       }
     ).then((res) => {
-      res.json().then((res) => {
-        console.log("res: ", res);
+      res.json().then(() => {
+        setIsLoading(false);
+        document.querySelector<HTMLFormElement>("#form")?.reset();
+        navigate("/contact/success");
       });
     });
   }
 
   return (
     <form
+      id="form"
       style={{ fontSize: "14px" }}
       className="d-flex justify-content-center flex-column hidden"
     >
@@ -110,7 +118,7 @@ export function ContactForm({ isEmailSent }: { isEmailSent: boolean }) {
             border: "none",
           }}
         >
-          Send email
+          {isLoading ? <LoadingSpinner /> : "Send email"}
         </button>
       </div>
     </form>
