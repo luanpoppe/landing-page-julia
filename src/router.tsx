@@ -14,7 +14,11 @@ export const rotas = createBrowserRouter([
   },
   {
     path: "/contact",
-    element: <Contact />,
+    element: <Contact isEmailSent={false} />,
+  },
+  {
+    path: "/contact/success",
+    element: <Contact isEmailSent={true} />,
   },
   {
     path: "/project/sanar",

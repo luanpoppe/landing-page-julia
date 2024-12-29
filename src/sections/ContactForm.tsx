@@ -1,6 +1,35 @@
+import { useEffect } from "react";
 import { mainColors } from "../utils/colors";
 
-export function ContactForm() {
+export function ContactForm({ isEmailSent }: { isEmailSent: boolean }) {
+  useEffect(() => {
+    if (isEmailSent) {
+      document.getElementById("message-sent")?.scrollIntoView();
+    }
+  }, []);
+
+  function sendEmail() {
+    const emailFrom = document.querySelector<HTMLInputElement>("#email")?.value;
+    const name = document.querySelector<HTMLInputElement>("#name")?.value;
+    const message = document.querySelector<HTMLInputElement>("#message")?.value;
+
+    fetch("http://localhost:8005/email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        emailFrom,
+        name,
+        message,
+      }),
+    }).then((res) => {
+      res.json().then((res) => {
+        console.log("res: ", res);
+      });
+    });
+  }
+
   return (
     <form
       style={{ fontSize: "14px" }}
@@ -11,9 +40,12 @@ export function ContactForm() {
           Email
         </label>
         <input
+          disabled={isEmailSent}
+          required
           id="email"
           placeholder="Your email"
           type="email"
+          name="email"
           style={{
             padding: "14px 16px",
             borderRadius: "1px",
@@ -27,9 +59,12 @@ export function ContactForm() {
           Name
         </label>
         <input
+          required
+          disabled={isEmailSent}
           id="name"
           placeholder="Your name"
           type="text"
+          name="name"
           style={{
             padding: "14px 16px",
             borderRadius: "1px",
@@ -43,6 +78,9 @@ export function ContactForm() {
           Message
         </label>
         <textarea
+          required
+          disabled={isEmailSent}
+          name="message"
           id="message"
           placeholder="Write your message here..."
           style={{
@@ -57,6 +95,9 @@ export function ContactForm() {
 
       <div className="d-flex mt-5">
         <button
+          onClick={sendEmail}
+          type="button"
+          disabled={isEmailSent}
           className="col-6 font-karla mb-5"
           style={{
             fontWeight: "600",

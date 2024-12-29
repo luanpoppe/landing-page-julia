@@ -4,7 +4,7 @@ export function handleOverflow(path: string) {
   const contactPage = document.getElementById("contact-page") as HTMLElement;
   const imageAndForm = document.getElementById("right-home") as HTMLElement;
 
-  if (path != "/" && path != "/contact") {
+  if (path != "/" && path != "/contact" && path != "/contact/success") {
     body.style.overflow = "";
     root.style.overflow = "";
     return;

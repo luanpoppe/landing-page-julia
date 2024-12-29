@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { mainColors } from "../../utils/colors";
 const Style = styled.a`
-  background-color: #d6d1ff;
+  background-color: ${mainColors.lightPurple};
   border-radius: 1000px;
   padding: 13px 44px;
   color: rgb(33, 35, 41) !important;
