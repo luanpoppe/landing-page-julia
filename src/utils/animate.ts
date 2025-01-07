@@ -1,5 +1,4 @@
 export function handleAnimation() {
-  console.log("COMEÇOU A GUNÇÃO");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {

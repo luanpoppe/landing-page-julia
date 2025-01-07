@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { mainColors } from "../utils/colors";
 import { LoadingSpinner } from "../components/LoadingSpinner";
 import { useNavigate } from "react-router-dom";
+import { email } from "../utils/email";
 
 export function ContactForm({ isEmailSent }: { isEmailSent: boolean }) {
   const navigate = useNavigate();
@@ -12,36 +13,16 @@ export function ContactForm({ isEmailSent }: { isEmailSent: boolean }) {
     }
   }, []);
 
-  function sendEmail() {
+  function sendEmail(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     setIsLoading(true);
-    const emailFrom = document.querySelector<HTMLInputElement>("#email")?.value;
-    const name = document.querySelector<HTMLInputElement>("#name")?.value;
-    const message = document.querySelector<HTMLInputElement>("#message")?.value;
 
-    fetch(
-      "https://email-server-julia-git-main-luanpoppes-projects.vercel.app/api/email.js",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          emailFrom,
-          name,
-          message,
-        }),
-      }
-    ).then((res) => {
-      res.json().then(() => {
-        setIsLoading(false);
-        document.querySelector<HTMLFormElement>("#form")?.reset();
-        navigate("/contact/success");
-      });
-    });
+    email.sendEmail(setIsLoading, navigate);
   }
 
   return (
     <form
+      onSubmit={(e) => sendEmail(e)}
       id="form"
       style={{ fontSize: "14px" }}
       className="d-flex justify-content-center flex-column hidden"
@@ -93,6 +74,7 @@ export function ContactForm({ isEmailSent }: { isEmailSent: boolean }) {
           disabled={isEmailSent}
           name="message"
           id="message"
+          maxLength={400}
           placeholder="Write your message here..."
           style={{
             resize: "none",
@@ -106,8 +88,7 @@ export function ContactForm({ isEmailSent }: { isEmailSent: boolean }) {
 
       <div className="d-flex mt-5">
         <button
-          onClick={sendEmail}
-          type="button"
+          type="submit"
           disabled={isEmailSent}
           className="col-6 font-karla mb-5"
           style={{
