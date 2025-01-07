@@ -3,6 +3,12 @@
   transition: all 2s;
 }
 
+/* Temporário apenas durante o desenvolvimento: */
+/* .hidden { 
+  opacity: 1;
+  transition: all 2s;
+} */
+
 .show {
   opacity: 1;
 }
