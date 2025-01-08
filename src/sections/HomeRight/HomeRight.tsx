@@ -5,11 +5,11 @@ import styled from "styled-components";
 export function HomeRight() {
   return (
     <SectionStyled
-      className="m-0 mb-5 my-md-5 text-center y-sm-scroll d-block overflow-x-hidden"
+      className="m-0 mb-5 my-md-5 text-center d-block overflow-x-hidden"
       id="right-home"
     >
       <div
-        className="row g-4 aling-items-center flex-lg-row y-sm-scroll"
+        className="row g-4 aling-items-center flex-lg-row"
         id="right-home-div"
       >
         <OneProject

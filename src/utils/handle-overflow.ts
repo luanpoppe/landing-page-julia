@@ -5,7 +5,14 @@ export function handleOverflow(path: string) {
   // const imageAndForm = document.getElementById("right-home") as HTMLElement;
   // const rightHomeDiv = document.getElementById("right-home-div") as HTMLElement;
 
-  if (path != "/" && path != "/contact" && path != "/contact/success") {
+  if (path == "/contact" || path == "/contact/success") {
+    body.style.overflow = "scroll !important";
+    root.style.overflow = "scroll !important";
+    body.style.overflowX = "hidden";
+    root.style.overflowX = "hidden";
+  }
+
+  if (path != "/") {
     body.style.overflow = "";
     root.style.overflow = "";
     return;

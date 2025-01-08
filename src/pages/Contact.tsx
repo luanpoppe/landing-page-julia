@@ -14,7 +14,7 @@ export function Contact({ isEmailSent }: { isEmailSent: boolean }) {
       <SectionStyled
         className="d-block d-lg-flex justify-content-center gap-5 text-center"
         id="right-home"
-        style={{ padding: "2% 4%", maxHeight: "100vh" }}
+        style={{ padding: "2% 4%" }}
       >
         <div>
           <img
@@ -24,7 +24,7 @@ export function Contact({ isEmailSent }: { isEmailSent: boolean }) {
             alt="Personal picture"
           />
         </div>
-        <div className="col-12 col-lg-6 text-start h-100">
+        <div className="col-12 col-lg-6 text-start">
           <div
             className={`font-varela-round mt-3 mt-lg-0 hidden ${
               isEmailSent ? "d-none" : ""
@@ -64,8 +64,8 @@ export function Contact({ isEmailSent }: { isEmailSent: boolean }) {
   );
 }
 
-const SectionStyled = styled.form`
+const SectionStyled = styled.div`
   @media (min-width: 768px) {
-    margin-left: 35% !important;
+    margin-left: 33% !important;
   }
 `;

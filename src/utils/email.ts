@@ -24,6 +24,10 @@ export const email = {
         setIsLoading(false);
         document.querySelector<HTMLFormElement>("#form")?.reset();
         navigate("/contact/success");
+
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 500);
       });
     });
   },

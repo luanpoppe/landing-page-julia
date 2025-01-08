@@ -17,11 +17,7 @@ export function ProfileHeader({ color }: { color?: string }) {
           className="d-flex flex-column justify-content-center"
           style={{ height: "50px", maxHeight: "30px" }}
         >
-          <ProfileHeaderMargin
-            style={{ maxHeight: "30px" }}
-            // className="profile-header-margin"
-            to={"/"}
-          >
+          <ProfileHeaderMargin style={{ maxHeight: "30px" }} to={"/"}>
             <p
               style={{
                 color: color ? `${color}` : "",

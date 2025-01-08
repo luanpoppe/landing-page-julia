@@ -7,11 +7,6 @@ import { email } from "../utils/email";
 export function ContactForm({ isEmailSent }: { isEmailSent: boolean }) {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  useEffect(() => {
-    if (isEmailSent) {
-      document.getElementById("message-sent")?.scrollIntoView();
-    }
-  }, []);
 
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
