@@ -13,5 +13,10 @@ export function useCustomLoadPage() {
     );
     window.addEventListener("resize", () => handleOverflow(location.pathname));
     handleOverflow(location.pathname);
+
+    return () =>
+      window.removeEventListener("resize", () =>
+        handleOverflow(location.pathname)
+      );
   }, []);
 }

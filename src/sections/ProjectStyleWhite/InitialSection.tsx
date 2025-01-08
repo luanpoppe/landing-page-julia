@@ -35,9 +35,9 @@ export function InitialSection() {
       >
         <ProfileHeader color={mainColors.blackLetters} />
 
-        <TitleAndImageStyled className="d-flex flex-column flex-lg-row align-items-center gap-5 mt-4 mt-lg-5">
+        <TitleAndImageStyled className="d-flex flex-column flex-md-row align-items-center gap-5 mt-4 mt-md-5">
           <div
-            className="col-12 col-lg-8 font-varela-round"
+            className="col-12 col-md-8 font-varela-round"
             style={{ fontSize: "inherit", lineHeight: "inherit" }}
           >
             Navigation app for shopping centers
@@ -54,7 +54,7 @@ export function InitialSection() {
               prototyping
             </span>
           </div>
-          <div className="col-12 col-lg-4 d-flex justify-content-center">
+          <div className="col-12 col-md-3 col-lg-4 d-flex justify-content-center">
             <img
               src="../imagem-projeto-shopping-center.png"
               alt="Sopping Center Image"

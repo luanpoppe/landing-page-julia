@@ -25,8 +25,11 @@ const HomeLeftStyled = styled.section`
     margin-bottom: 24px;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     margin-bottom: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 `;
 
@@ -50,7 +53,7 @@ function HomeLeft() {
 
   return (
     <HomeLeftStyled
-      className="col-12 col-lg-4 d-flex flex-column justify-content-between align-items-center"
+      className="col-12 col-lg-4 d-flex flex-column justify-content-between align-items-center y-lg-hidden"
       id="left-home"
     >
       <MenuMobile
@@ -67,9 +70,11 @@ function HomeLeft() {
 
       <div className="d-flex flex-column justify-content-center align-items-center hidden">
         <ProfileImage />
+
         <RedirectionButtons />
-        <h1 style={{ marginBottom: "22px" }}>Julia</h1>
-        <div style={{ marginBottom: "60px", textAlign: "center" }}>
+
+        <h1 className="mb-4">Julia</h1>
+        <div className="text-center mb-4">
           I am passionate about using my creativity to tackle challenges. I have
           a 7-year career in Graphic Design and Web Design and am currently
           specializing and seeking an opportunity in the UX/UI Design field.

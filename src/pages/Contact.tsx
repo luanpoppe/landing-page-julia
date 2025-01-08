@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { ContactForm } from "../sections/ContactForm";
 import HomeLeft from "../sections/HomeLeft/HomeLeft";
 import { mainColors } from "../utils/colors";
@@ -10,7 +11,7 @@ export function Contact({ isEmailSent }: { isEmailSent: boolean }) {
     <div className="d-flex flex-column flex-md-row h-100" id="contact-page">
       <HomeLeft />
 
-      <section
+      <SectionStyled
         className="d-block d-lg-flex justify-content-center gap-5 text-center"
         id="right-home"
         style={{ padding: "2% 4%", maxHeight: "100vh" }}
@@ -58,7 +59,13 @@ export function Contact({ isEmailSent }: { isEmailSent: boolean }) {
 
           <ContactForm isEmailSent={isEmailSent} />
         </div>
-      </section>
+      </SectionStyled>
     </div>
   );
 }
+
+const SectionStyled = styled.form`
+  @media (min-width: 768px) {
+    margin-left: 35% !important;
+  }
+`;

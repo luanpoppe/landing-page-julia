@@ -1,5 +1,6 @@
 import "./App.css";
-import "./utils/animate.css";
+import "./styles/animate.css";
+import "./styles/overflow.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { rotas } from "./router";
 import { RouterProvider } from "react-router-dom";

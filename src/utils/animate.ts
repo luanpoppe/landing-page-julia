@@ -10,7 +10,6 @@ export function handleAnimation() {
   });
 
   const hiddenElements = document.querySelectorAll(".hidden");
-  console.log("hiddenElements: ", hiddenElements);
   hiddenElements.forEach((el) => {
     observer.observe(el);
   });
