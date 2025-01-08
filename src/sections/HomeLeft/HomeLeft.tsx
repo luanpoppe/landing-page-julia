@@ -31,12 +31,6 @@ const HomeLeftStyled = styled.section`
     top: 0;
     left: 0;
   }
-
-  @media (min-width: 768px) and (max-width: 992px) and (min-height: 900px) {
-    .adjust-tablet {
-      margin-bottom: 40px;
-    }
-  }
 `;
 
 function HomeLeft() {
@@ -58,40 +52,43 @@ function HomeLeft() {
   }
 
   return (
-    <HomeLeftStyled
-      className="col-12 col-lg-4 d-flex flex-column justify-content-between align-items-center y-lg-hidden"
-      id="left-home"
-    >
-      <MenuMobile
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        isHomeOrContact={isHomeOrContact}
-      />
-      <nav className="d-flex justify-content-between w-100 d-md-none">
-        <Link to={"/"}>
-          <h5>Julia</h5>
-        </Link>
-        <FiMenu size={24} onClick={handleOpenMenu} className="clickable" />
-      </nav>
-
-      <div className="d-flex flex-column justify-content-center align-items-center hidden">
-        <ProfileImage />
-
-        <RedirectionButtons />
-
-        <h1 className="mb-4">Julia</h1>
-        <div className="text-center mb-4">
-          I am passionate about using my creativity to tackle challenges. I have
-          a 7-year career in Graphic Design and Web Design and am currently
-          specializing and seeking an opportunity in the UX/UI Design field.
-        </div>
-      </div>
-
-      <div className="d-none d-md-block adjust-tablet">
-        <HomeContactButtons
-          isHomeOrContact={isHomeOrContact}
+    <HomeLeftStyled className="col-12 col-lg-4 y-lg-hidden" id="left-home">
+      <div className="d-flex flex-column justify-content-between align-items-center">
+        <MenuMobile
           isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+          isHomeOrContact={isHomeOrContact}
         />
+        <nav className="d-flex justify-content-between w-100 d-md-none">
+          <Link to={"/"}>
+            <h5>Julia</h5>
+          </Link>
+          <FiMenu size={24} onClick={handleOpenMenu} className="clickable" />
+        </nav>
+
+        <div
+          className="d-flex flex-column justify-content-start align-items-center hidden"
+          style={{ height: "80vh" }}
+        >
+          <ProfileImage />
+
+          <RedirectionButtons />
+
+          <h1 className="mb-4">Julia</h1>
+          <div className="text-center mb-4">
+            I am passionate about using my creativity to tackle challenges. I
+            have a 7-year career in Graphic Design and Web Design and am
+            currently specializing and seeking an opportunity in the UX/UI
+            Design field.
+          </div>
+        </div>
+
+        <div className="d-none d-md-block">
+          <HomeContactButtons
+            isHomeOrContact={isHomeOrContact}
+            isMenuOpen={isMenuOpen}
+          />
+        </div>
       </div>
     </HomeLeftStyled>
   );
