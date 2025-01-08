@@ -8,8 +8,6 @@ export function handleOverflow(path: string) {
   if (path != "/" && path != "/contact" && path != "/contact/success") {
     body.style.overflow = "";
     root.style.overflow = "";
-
-    window.scrollTo(0, 0);
     return;
   }
 

@@ -13,10 +13,13 @@ export function ScrollTopButton(props: Props) {
 
   const buttonScrollTop = useRef<HTMLDivElement>(null);
 
-  window.addEventListener("scroll", () => {
+  const callback = () => {
     if (window.scrollY > 500) setButtonShouldAppear(true);
     else setButtonShouldAppear(false);
-  });
+  };
+
+  window.removeEventListener("scroll", callback);
+  window.addEventListener("scroll", callback);
 
   function clickButtonScrollTop() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });

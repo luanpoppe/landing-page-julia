@@ -31,7 +31,14 @@ export function ReadMoreAndContact({
       <HorizontalProjectSection className="d-flex flex-column align-items-center">
         <h3 className="mb-5">Read more of my case studies</h3>
         <div style={{ maxWidth: "150px" }}>
-          <Link to={linkUrl}>
+          <Link
+            to={linkUrl}
+            onClick={() =>
+              setTimeout(() => {
+                window.scrollTo(0, 0);
+              }, 500)
+            }
+          >
             <img
               style={{ maxWidth: "150px", maxHeight: "150px" }}
               src={imageSrc}
