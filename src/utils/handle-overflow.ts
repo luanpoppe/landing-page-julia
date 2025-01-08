@@ -1,9 +1,9 @@
 export function handleOverflow(path: string) {
   const root = document.getElementById("root") as HTMLDivElement;
   const body = document.getElementsByTagName("body")[0] as HTMLBodyElement;
-  const contactPage = document.getElementById("contact-page") as HTMLElement;
-  const imageAndForm = document.getElementById("right-home") as HTMLElement;
-  const rightHomeDiv = document.getElementById("right-home-div") as HTMLElement;
+  // const contactPage = document.getElementById("contact-page") as HTMLElement;
+  // const imageAndForm = document.getElementById("right-home") as HTMLElement;
+  // const rightHomeDiv = document.getElementById("right-home-div") as HTMLElement;
 
   if (path != "/" && path != "/contact" && path != "/contact/success") {
     body.style.overflow = "";
