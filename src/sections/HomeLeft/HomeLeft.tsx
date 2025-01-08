@@ -31,6 +31,12 @@ const HomeLeftStyled = styled.section`
     top: 0;
     left: 0;
   }
+
+  @media (min-width: 768px) and (max-width: 992px) and (min-height: 900px) {
+    .adjust-tablet {
+      margin-bottom: 40px;
+    }
+  }
 `;
 
 function HomeLeft() {
@@ -81,7 +87,7 @@ function HomeLeft() {
         </div>
       </div>
 
-      <div className="d-none d-md-block">
+      <div className="d-none d-md-block adjust-tablet">
         <HomeContactButtons
           isHomeOrContact={isHomeOrContact}
           isMenuOpen={isMenuOpen}
