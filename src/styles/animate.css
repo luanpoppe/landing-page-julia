@@ -4,10 +4,10 @@
 }
 
 /* Temporário apenas durante o desenvolvimento: */
-.hidden { 
+/* .hidden { 
   opacity: 1;
   transition: all 2s;
-}
+} */
 
 .show {
   opacity: 1;
