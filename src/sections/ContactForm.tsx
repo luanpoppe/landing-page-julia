@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { mainColors } from "../utils/colors";
 import { LoadingSpinner } from "../components/LoadingSpinner";
 import { useNavigate } from "react-router-dom";
