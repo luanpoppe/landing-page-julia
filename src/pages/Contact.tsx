@@ -26,6 +26,7 @@ export function Contact({ isEmailSent }: { isEmailSent: boolean }) {
         </div>
         <div className="col-12 col-lg-6 text-start">
           <div
+            id="get-in-touch"
             className={`font-varela-round mt-3 mt-lg-0 hidden ${
               isEmailSent ? "d-none" : ""
             }`}
