@@ -1,5 +1,5 @@
 
-# Título do Projeto
+# Site de Portfólio UX/UI
 
 Este projeto foi desenvolvido a pedido de uma amiga que está em transição de carreira para a área de UX/UI. O objetivo foi aprimorar o site que ela criou utilizando uma plataforma de criação sem código, a qual, embora útil, apresenta diversas limitações. Com isso, recriei o site, oferecendo mais flexibilidade e recursos. O resultado final pode ser acessado em: https://landing-page-julia-sigma.vercel.app/.
 
