@@ -26,7 +26,8 @@ export const email = {
         navigate("/contact/success");
 
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          const msgSent = document.getElementById("message-sent");
+          msgSent?.scrollIntoView();
         }, 500);
       });
     });
