@@ -17,7 +17,7 @@ export function ProjectImage() {
         xmlns="http://www.w3.org/2000/svg"
         d="M189 74C189 48.7976 189 36.1965 193.905 26.5704C198.219 18.1031 205.103 11.219 213.57 6.90471C223.196 2 235.798 2 261 2H1611C1636.2 2 1648.8 2 1658.43 6.90471C1666.9 11.219 1673.78 18.1031 1678.1 26.5704C1683 36.1965 1683 48.7976 1683 74V1113C1683 1138.2 1683 1150.8 1678.1 1160.43C1673.78 1168.9 1666.9 1175.78 1658.43 1180.1C1648.8 1185 1636.2 1185 1611 1185H261C235.798 1185 223.196 1185 213.57 1180.1C205.103 1175.78 198.219 1168.9 193.905 1160.43C189 1150.8 189 1138.2 189 1113V74Z"
         fill="black"
-        fill-opacity="0.06"
+        fillOpacity="0.06"
       ></path>
       <rect
         xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ export function ProjectImage() {
         xmlns="http://www.w3.org/2000/svg"
         d="M1623 1199V1198H1742V1199L1731 1210H1634L1623 1199Z"
         fill="black"
-        fill-opacity="0.12"
+        fillOpacity="0.12"
       ></path>
       <path
         xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ export function ProjectImage() {
         xmlns="http://www.w3.org/2000/svg"
         d="M130 1199V1198H249V1199L238 1210H141L130 1199Z"
         fill="black"
-        fill-opacity="0.12"
+        fillOpacity="0.12"
       ></path>
       <foreignObject
         className="mockup-screen"
@@ -87,7 +87,7 @@ export function ProjectImage() {
         xmlns="http://www.w3.org/2000/svg"
         d="M777 1133H1094C1094 1145.15 1084.15 1155 1072 1155H799C786.85 1155 777 1145.15 777 1133Z"
         fill="black"
-        fill-opacity="0.12"
+        fillOpacity="0.12"
       ></path>
     </svg>
   );
